@@ -1,17 +1,17 @@
-/* ALLSTORE 24/7 - Global Stylesheet
-   Luxury Minimalist Design (Inspiré Rolex)
-   Colors: #094201 (Vert Roi), #cc9704 (Doré)
+/* ALLSTORE 24/7 - Future Pure Vision
+   Style: Minimalisme Futuriste / Glassmorphism
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap');
 
 :root {
-    --primary-green: #094201;
-    --luxury-gold: #cc9704;
-    --bg-white: #ffffff;
-    --text-dark: #1a1a1a;
-    --text-light: #f4f4f4;
-    --gray-bg: #f9f9f9;
+    --deep-green: #052a01;
+    --royal-green: #094201;
+    --ethereal-gold: rgba(204, 151, 4, 0.6);
+    --pure-gold: #cc9704;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #e0e0e0;
 }
 
 * {
@@ -21,235 +21,185 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: radial-gradient(circle at top right, #094201, #021400);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
     line-height: 1.6;
-    color: var(--text-dark);
-    background-color: var(--bg-white);
 }
 
-/* Header & Navigation */
+/* Animations Fluides */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(204, 151, 4, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(204, 151, 4, 0.4); }
+    100% { box-shadow: 0 0 5px rgba(204, 151, 4, 0.2); }
+}
+
+/* Header Flottant */
 header {
-    background-color: var(--primary-green);
-    padding: 20px 5%;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid var(--luxury-gold);
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 90%;
+    top: 20px;
+    left: 5%;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
     z-index: 1000;
+    animation: fadeIn 1s ease-out;
 }
 
 .logo-container img {
-    height: 60px;
-    width: auto;
+    height: 45px;
+    filter: brightness(1.2);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 2rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-light);
-    font-weight: 600;
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+    letter-spacing: 2px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 nav ul li a:hover {
-    color: var(--luxury-gold);
+    color: var(--pure-gold);
+    text-shadow: 0 0 10px var(--ethereal-gold);
 }
 
-/* Hero Section */
+/* Hero Section Pure */
 .hero {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 10%;
-    background: linear-gradient(rgba(9, 66, 1, 0.05), rgba(9, 66, 1, 0.02));
 }
 
 .hero h1 {
-    font-size: 3rem;
-    color: var(--primary-green);
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: -1px;
+    font-weight: 200;
+    font-size: 4rem;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to bottom, #fff, var(--ethereal-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1.2s ease-out;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    color: #444;
-    max-width: 700px;
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-/* Buttons */
-.btn-gold {
-    display: inline-block;
-    padding: 18px 45px;
-    background-color: var(--luxury-gold);
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--luxury-gold);
-}
-
-.btn-gold:hover {
-    background-color: transparent;
-    color: var(--luxury-gold);
-}
-
-.btn-green {
-    display: inline-block;
-    padding: 18px 45px;
-    background-color: var(--primary-green);
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.btn-green:hover {
-    opacity: 0.9;
-}
-
-/* Page Layouts */
-section {
-    padding: 80px 10%;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2rem;
-    color: var(--primary-green);
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: var(--luxury-gold);
-    margin: 15px auto 0;
-}
-
-/* Chat Interface (Simulation) */
-.chat-window {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    overflow: hidden;
+    font-weight: 400;
     max-width: 600px;
-    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 3rem;
+    animation: fadeIn 1.5s ease-out;
 }
 
-.chat-header {
-    background: var(--primary-green);
-    color: white;
-    padding: 15px 20px;
-    font-weight: 600;
-}
-
-.chat-body {
-    padding: 30px;
-    min-height: 300px;
-    background: var(--gray-bg);
-}
-
-.chat-bubble {
-    background: white;
-    padding: 15px;
-    border-radius: 15px 15px 15px 0;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    font-size: 0.95rem;
-}
-
-.chat-input-area {
-    padding: 20px;
-    border-top: 1px solid #eee;
-}
-
-textarea.fake-input {
-    width: 100%;
-    height: 100px;
-    border: 1px solid #ddd;
-    padding: 15px;
-    font-family: inherit;
-    resize: none;
-    margin-bottom: 15px;
-    outline: none;
-}
-
-textarea.fake-input:focus {
-    border-color: var(--luxury-gold);
-}
-
-/* Info Blocks */
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.info-card {
-    padding: 30px;
-    border-left: 4px solid var(--luxury-gold);
-    background: var(--gray-bg);
-}
-
-.info-card h3 {
-    color: var(--primary-green);
-    margin-bottom: 15px;
-}
-
-/* Footer (Small) */
-footer {
-    padding: 40px 10%;
-    background-color: #111;
-    color: #666;
-    text-align: center;
+/* Boutons Innovants */
+.btn-future {
+    position: relative;
+    padding: 20px 50px;
+    background: transparent;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
     font-size: 0.8rem;
+    border: 1px solid var(--ethereal-gold);
+    overflow: hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(5px);
+}
+
+.btn-future:hover {
+    background: var(--pure-gold);
+    color: #000;
+    box-shadow: 0 0 30px var(--ethereal-gold);
+}
+
+/* Chatbot Glassmorphism */
+.chat-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 900px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.bubble {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 70%;
+    font-weight: 200;
+}
+
+.bubble.bot {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 2px solid var(--pure-gold);
+    color: #fff;
+}
+
+.bubble.user {
+    align-self: flex-end;
+    background: var(--royal-green);
+    border: 1px solid var(--glass-border);
+}
+
+.chat-input-container {
+    padding: 30px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.chat-input-container textarea {
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--glass-border);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.chat-input-container textarea:focus {
+    border-color: var(--pure-gold);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
+    .hero h1 { font-size: 2.5rem; }
+    header { width: 96%; left: 2%; padding: 1rem; }
+    nav ul { display: none; } /* On pourrait ajouter un menu burger en JS plus tard */
 }
