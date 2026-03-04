@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistant IA Premium | ALLSTORE 24/7</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour l'expérience Chatbot avancée */
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 4px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            border: 1px solid rgba(204, 151, 4, 0.2);
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background-color: #fdfdfd;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 15px 20px;
+            border-radius: 2px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            position: relative;
+        }
+
+        .message.bot {
+            align-self: flex-start;
+            background-color: var(--primary-green);
+            color: #ffffff;
+            border-left: 4px solid var(--luxury-gold);
+        }
+
+        .message.user-simulated {
+            align-self: flex-end;
+            background-color: #f0f0f0;
+            color: var(--text-dark);
+            border-right: 4px solid #ddd;
+            font-style: italic;
+        }
+
+        .typing-indicator {
+            font-size: 0.8rem;
+            color: var(--luxury-gold);
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .chat-footer {
+            padding: 25px;
+            border-top: 1px solid #eee;
+            background: #fff;
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .chat-textarea {
+            width: 100%;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            resize: none;
+            outline: none;
+            transition: border-color 0.3s;
+            background: #fafafa;
+        }
+
+        .chat-textarea:focus {
+            border-color: var(--luxury-gold);
+            background: #fff;
+        }
+
+        .action-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status-tag {
+            font-size: 0.75rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #27ae60;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="Logo ALLSTORE.jpeg" alt="Logo ALLSTORE 24/7">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="assistant.html">Assistant</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+                <li><a href="mentions.html">Légal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="section-title">Conciergerie Digitale</h2>
+                <p style="text-align: center; margin-bottom: 40px; color: #666;">Notre IA de prestige prépare votre commande personnalisée en quelques secondes.</p>
+                
+                <div class="chat-container">
+                    <div class="chat-messages">
+                        <div class="typing-indicator">Système ALLSTORE — Connecté</div>
+                        
+                        <div class="message bot">
+                            Bienvenue chez ALLSTORE 24/7. Je suis votre assistant personnel dédié aux acquisitions de prestige.
+                        </div>
+
+                        <div class="message bot">
+                            Pourriez-vous me décrire l'article ou le service que vous souhaitez obtenir ? Précisez la marque, le modèle ou toute exigence particulière.
+                        </div>
+
+                        <div class="message user-simulated">
+                            Exemple : Je recherche une montre de collection, état neuf, avec certificat d'authenticité...
+                        </div>
+                    </div>
+
+                    <div class="chat-footer">
+                        <div class="input-wrapper">
+                            <textarea class="chat-textarea" placeholder="Saisissez votre demande ici..." rows="3"></textarea>
+                        </div>
+                        
+                        <div class="action-area">
+                            <div class="status-tag">
+                                <span class="status-dot"></span>
+                                IA Opérationnelle | Chiffrement SSL 256-bit
+                            </div>
+                            <!-- Redirection directe vers le numéro demandé -->
+                            <a href="https://api.whatsapp.com/send?phone=33626587984&text=Bonjour%20ALLSTORE,%20je%20souhaite%20finaliser%20ma%20demande%20d'achat." class="btn-gold">Finaliser via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 ALLSTORE 24/7. Service Clientèle d'Exception.
+    </footer>
+
+</body>
+</html>
