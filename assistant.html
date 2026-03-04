@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistant IA Premium | ALLSTORE 24/7</title>
+    <title>Concierge IA | ALLSTORE 24/7</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Styles spécifiques pour l'expérience Chatbot avancée */
-        .chat-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 4px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            height: 70vh;
-            border: 1px solid rgba(204, 151, 4, 0.2);
-        }
+</head>
+<body>
 
-        .chat-messages {
-            flex: 1;
-            padding: 30px;
-            overflow-y: auto;
-            background-color: #fdfdfd;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    <header>
+        <div class="logo-container">
+            <img src="Logo ALLSTORE.jpeg" alt="Logo ALLSTORE 24/7">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Vision</a></li>
+                <li><a href="assistant.html">Assistant</a></li>
+                <li><a href="apropos.html">Héritage</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        .message {
-            max-width: 80%;
-            padding: 15px 20px;
-            border-radius: 2px;
-            font-size: 0.95rem;
-            line-height: 1.5;
+    <main style="display: flex; justify-content: center; align-items: center; min-height: 100vh; padding-top: 100px;">
+        <div class="chat-glass">
+            <div class="chat-messages">
+                <div style="font-size: 0.7rem; letter-spacing: 3px; color: var(--pure-gold); margin-bottom: 20px;">CONNEXION ÉTABLIE — SÉCURISÉE</div>
+                <div class="bubble bot">
+                    Bonjour. Je suis l'interface prédictive ALLSTORE. Décrivez l'objet de votre convoitise, je structurerai votre demande pour votre partenaire privilégié.
+                </div>
+            </div>
+            
+            <div class="chat-input-container">
+                <textarea placeholder="Formulez votre souhait..."></textarea>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <span style="font-size: 0.7rem; color: rgba(255,255,255,0.3);">LATENCE: 2ms</span>
+                    <a href="https://api.whatsapp.com/send?phone=33626587984&text=Bonjour,%20je%20souhaite%20finaliser%20ma%20demande%20d'achat." class="btn-future" style="padding: 12px 30px; font-size: 0.7rem;">Transmettre à WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>            line-height: 1.5;
             position: relative;
         }
 
